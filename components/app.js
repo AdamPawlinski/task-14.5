@@ -16,6 +16,18 @@ var contacts = [
     firstName: 'Zbigniew',
     lastName: 'Koziol',
     email: 'zbigniew.koziol@example.com',
+  },
+  {
+    id: 4,
+    firstName: 'Paul',
+    lastName: 'McCartney',
+    email: 'paul.beatles@example.com',
+  },
+  {
+    id: 5,
+    firstName: 'Mick',
+    lastName: 'Jagger',
+    email: 'mick.rolling@example.com',
   }
 ];
 
@@ -24,14 +36,15 @@ var contactForm = {
   firstName: '',
   lastName: '',
   email: ''
-}
+};
 
 var App = React.createClass({
   render: function() {
     return (
-      React.createElement('div', {className: "app"}),
-      React.createElement(ContactForm, {contact: contactForm}),
-      React.createElement(Contacts, {items: contacts}, {})
+      React.createElement('div', {className: "app"},
+        React.createElement(ContactForm, {contact: contactForm}),
+        React.createElement(Contacts, {items: contacts}, {})
+      )
     )
   }
 })
